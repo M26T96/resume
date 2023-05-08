@@ -33,6 +33,16 @@
                                 Age: {{age}}<br />
                                 {{/each}}
                             </div>
+                            <div>
+                                <h3>Groups:</h3>
+                                {{#each groups}}
+                                <ul>
+                                    Id: {{id}}
+                                    Name: {{name}}
+                                    Description: {{description}}
+                                </ul>
+                                {{/each}}
+                            </div>
                         </ul>
                         {{/each}}
                     </div>
