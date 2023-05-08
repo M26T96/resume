@@ -689,6 +689,7 @@ router.get('/web', function (req, res) {
 
 // ================================================================
 
+
 // router.get Створює нам один ентпоїнт
 
 router.get('/car', function (req, res) {
@@ -785,6 +786,7 @@ router.get('/car', function (req, res) {
       },
       total: 28990,
     },
+
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
