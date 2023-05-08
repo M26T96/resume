@@ -845,7 +845,7 @@ router.get('/facebook', function (req, res) {
         ],
       },
     ],
-=======
+
 
 // router.get Створює нам один ентпоїнт
 
