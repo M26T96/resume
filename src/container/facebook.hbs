@@ -35,6 +35,27 @@
                             </div>
                         </ul>
                         {{/each}}
+                        <div>
+                            <h4>Groups:</h4>
+                            {{#each groups}}
+                            <ul>
+                                Id: {{id}}<br />
+                                Name: {{name}}<br />
+                                Description: {{description}}
+                                <div>
+                                    <h4>Members:</h4>
+                                    {{#each members}}
+                                    <ul>
+                                        Id: {{id}}<br />
+                                        Name: {{name}}<br />
+                                        Gender: {{gender}}<br />
+                                        Age: {{age}}<br />
+                                    </ul>
+                                    {{/each}}
+                                </div>
+                            </ul>
+                            {{/each}}
+                        </div>
                     </div>
                 </ul>
                 {{/each}}
