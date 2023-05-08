@@ -845,8 +845,8 @@ router.get('/facebook', function (req, res) {
         ],
       },
     ],
-
-
+  })
+})
 // router.get Створює нам один ентпоїнт
 
 router.get('/mac', function (req, res) {
@@ -932,7 +932,7 @@ router.get('/mac', function (req, res) {
         },
       ],
     },
-
+  })
 //=========================================
 // router.get Створює нам один ентпоїнт
 
