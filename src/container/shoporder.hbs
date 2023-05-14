@@ -2,7 +2,7 @@
     <div class="row">
         {{#with navigation}}
         <div class="col-12">
-            <div class="nav">
+            <div class="nav ">
                 <div class="nav-item">
                     <a href="{{links.[0].href}}" class="btn btn-link nav-link">{{links.[0].text}}</a>
                 </div>
@@ -13,7 +13,7 @@
                     <a href="{{links.[2].href}}" class="btn btn-link nav-link">{{links.[2].text}}</a>
                 </div>
                 <div class="nav-item">
-                    <a href="{{links.[3].href}}" class="btn btn-link nav-link">{{links.[3].text}}</a>
+                    <a href="{{links.[3].href}}" class="btn btn-link nav-link disabled">{{links.[3].text}}</a>
                 </div>
             </div>
         </div>
@@ -248,7 +248,7 @@
                             </div>
                             {{/with}}
                             {{#with factors}}
-                            <label class="form-check-label">{{title}}</label>
+                            <label class="form-check-label mt-2">{{title}}</label>
                             <div class="form-check">
                                 {{#each options}}
                                 <input class="form-check-input" type="checkbox">
@@ -259,13 +259,16 @@
                         </div>
                         {{/with}}
                     </div>
+                    <div>
+                        <hr>
+                    </div>
                     <div class="row">
                         {{#each footer}}
                         <div class="col-2">
                             {{#each this}}
                             <div class="nav ps-1 px-1 pt-1">
                                 <div class="nav-item">
-                                    <a href="{{link}}" class="btn btn-link">{{text}}</a>
+                                    <a href="{{link}}" class="btn btn-link {{#if @last}}disabled{{/if}}">{{text}}</a>
                                 </div>
                             </div>
                             {{/each}}
