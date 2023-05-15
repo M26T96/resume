@@ -1,0 +1,11 @@
+<div class="mb-5">
+    {{#with total}}
+    <div class="display-6">{{title}}</div>
+    <div class="display-5">{{amount}}</div>
+    <div class="form-text pb-4">{{delivery}}</div>
+    {{#each buttons}}
+    <p> {{#if isSuccess}}<a href="{{link}}" class="btn btn-success">{{text}}</a>{{/if}}</p>
+    <p> {{#if isOutline}}<a href="{{link}}" class="btn btn-outline-success">{{text}}</a>{{/if}}</p>
+    {{/each}}
+    {{/with}}
+</div>
