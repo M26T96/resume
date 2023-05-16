@@ -1,86 +1,88 @@
-<div>
-    <h1><span class="badge bg-secondary">{{name}}</span></h1>
+<main class="m-2">
     <div>
-        {{#each users}}
-        <ul>
-            <h2>Users:</h2>
-            Id: {{id}}<br />
-            Name: {{name}}<br />
-            Gender: {{gender}}<br />
-            Age: {{age}}
-            <div>
-                {{#each friends}}
-                <ul>
-                    <h3>Friends:</h3>
-                    Id: {{id}}<br />
-                    Name: {{name}}<br />
-                    Gender: {{gender}}<br />
-                    Age: {{age}}<br />
-                    <div>
-                        <h4>Mutual friends</h4>
-                        {{#each mutual_friends}}
-                        <ul>
-                            Id: {{id}}<br />
-                            Name: {{name}}<br />
-                            Gender: {{gender}}<br />
-                            Age: {{age}}<br />
-                            <div>
-                                {{#if mutual_friends}}<h5>Mutual friends:</h5>{{/if}}
-                                {{#each mutual_friends}}
+        <div class="display-3"><span class="badge bg-secondary">{{name}}</span></div>
+        <div>
+            {{#each users}}
+            <ul class="mt-2">
+                <h2 class="pb-3">Users:</h2>
+                Id: {{id}}<br />
+                Name: {{name}}<br />
+                Gender: {{gender}}<br />
+                Age: {{age}}
+                <div>
+                    {{#each friends}}
+                    <ul class="mt-2">
+                        <h3 class="pb-3">Friends:</h3>
+                        Id: {{id}}<br />
+                        Name: {{name}}<br />
+                        Gender: {{gender}}<br />
+                        Age: {{age}}<br />
+                        <div>
+                            <h4 class="pb-3">Mutual friends</h4>
+                            {{#each mutual_friends}}
+                            <ul class="mt-2">
                                 Id: {{id}}<br />
                                 Name: {{name}}<br />
                                 Gender: {{gender}}<br />
                                 Age: {{age}}<br />
-                                {{/each}}
-                            </div>
-                        </ul>
-                        {{/each}}
-                        <div>
-                            <h4>Groups:</h4>
-                            {{#each groups}}
-                            <ul>
-                                Id: {{id}}<br />
-                                Name: {{name}}<br />
-                                Description: {{description}}
                                 <div>
-                                    <h4>Members:</h4>
-                                    {{#each members}}
-                                    <ul>
-                                        Id: {{id}}<br />
-                                        Name: {{name}}<br />
-                                        Gender: {{gender}}<br />
-                                        Age: {{age}}<br />
-                                    </ul>
+                                    {{#if mutual_friends}}<h5>Mutual friends:</h5>{{/if}}
+                                    {{#each mutual_friends}}
+                                    Id: {{id}}<br />
+                                    Name: {{name}}<br />
+                                    Gender: {{gender}}<br />
+                                    Age: {{age}}<br />
                                     {{/each}}
                                 </div>
                             </ul>
                             {{/each}}
-                        </div>
-                    </div>
-                </ul>
-                {{/each}}
-                <div>
-                    {{#if groups}}<h2>Groups:</h2>{{/if}}
-                    {{#each groups}}
-                    <ul>
-                        Id: {{id}}<br />
-                        Name: {{name}}<br />
-                        <div>
-                            <h2>Members:</h2>
-                            {{#each members}}
-                            <ul>
-                                Id: {{id}}<br />
-                                Name: {{name}}<br />
-                                Gender: {{gender}}<br />
-                                Age: {{age}}<br />
-                            </ul>
-                            {{/each}}
+                            <div>
+                                <h4 class="pb-3">Groups:</h4>
+                                {{#each groups}}
+                                <ul class="mt-2">
+                                    Id: {{id}}<br />
+                                    Name: {{name}}<br />
+                                    Description: {{description}}
+                                    <div>
+                                        <h4 class="pb-3">Members:</h4>
+                                        {{#each members}}
+                                        <ul>
+                                            Id: {{id}}<br />
+                                            Name: {{name}}<br />
+                                            Gender: {{gender}}<br />
+                                            Age: {{age}}<br />
+                                        </ul>
+                                        {{/each}}
+                                    </div>
+                                </ul>
+                                {{/each}}
+                            </div>
                         </div>
                     </ul>
                     {{/each}}
+                    <div>
+                        {{#if groups}}<h2 class="pb-3">Groups:</h2>{{/if}}
+                        {{#each groups}}
+                        <ul class="mt-2">
+                            Id: {{id}}<br />
+                            Name: {{name}}<br />
+                            <div>
+                                <h2 class="pb-3">Members:</h2>
+                                {{#each members}}
+                                <ul>
+                                    Id: {{id}}<br />
+                                    Name: {{name}}<br />
+                                    Gender: {{gender}}<br />
+                                    Age: {{age}}<br />
+                                </ul>
+                                {{/each}}
+                            </div>
+                        </ul>
+                        {{/each}}
+                    </div>
                 </div>
-            </div>
-        </ul>
-        {{/each}}
+            </ul>
+            {{/each}}
+        </div>
     </div>
-</div>
+</main>

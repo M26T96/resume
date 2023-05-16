@@ -1,104 +1,108 @@
-<div>
-    {{#with person}}
+<main class="m-2">
     <div>
-        <h1> {{name}}</h1>
-        Age:{{age}}
-        Gender:{{gender}}
-        {{#with address}}
-        <address>Addres:{{street}} {{city}} {{state}} {{zip}} {{country}}</address>
-        {{/with}}
-        <br>
-        <strong>Education</strong>
+        {{#with person}}
         <div>
-            {{#each education}}
-            <ul>
-                <li>{{degree}}, {{title}}</li>
-                <p>{{university}}, {{graduationYear}}</p>
-            </ul>
-            {{/each}}
-        </div>
+            <h1> {{name}}</h1>
+            <div class="mb-5">
+                Age:{{age}}
+                Gender:{{gender}}
+                {{#with address}}
+                <address>Addres:{{street}} {{city}} {{state}} {{zip}} {{country}}</address>
+                {{/with}}
+            </div>
 
-        <br>
-        <strong>Work Experience</strong>
-        <div>
-            {{#each workExperience}}
-            <ul>
-                <li>{{title}},{{company}}</li>
-                <p> {{startDate}}-{{endDate}}</p>
-                {{#each responsibilities}}
-                <ul type='circle'>
-                    <li>{{this}}</li>
+            <strong>Education</strong>
+            <div class="mb-5">
+                {{#each education}}
+                <ul>
+                    <li>{{degree}}, {{title}}</li>
+                    <p>{{university}}, {{graduationYear}}</p>
                 </ul>
                 {{/each}}
-                <p>Year founded: {{year_founded}}, Industry: {{industry}}</p>
+            </div>
 
-                <h2>Employees</h2>
-                <div>
-                    {{#each employees}}
-                    <ul type="circle">
-                        <li>{{name}},{{position}},{{department}}</li>
-                        <h3>Projects</h3>
-                        <div>
-                            {{#each projects}}
-                            <ul type="square">
-                                <p>{{name}}, {{description}}, {{status}}</p>
-                                <h4>Teams</h4>
-                                <div>
-                                    {{#each teams}}
-                                    <ul type="square">
-                                        <li>{{team_name}}</li>
-                                        {{#with team_leader}}
-                                        <p>Team Leader: {{name}},{{title}},{{email}}</p>
-                                        {{/with}}
-                                        <h5>Team members</h5>
-                                        <div>
-                                            {{#each team_members}}
-                                            <ul type="circle">
-                                                <li>{{name}},{{title}},{{email}}</li>
-                                                <br>
-                                                Skills
-                                                {{#each skills}}
-                                                <ul type="square">
-                                                    <li>{{this}}</li>
-                                                </ul>
-                                                {{/each}}
-                                                Projects
-                                                {{#each projects}}
-                                                <ul type="square">
-                                                    <li>{{name}}, {{description}}</li>
+
+            <strong>Work Experience</strong>
+            <div>
+                {{#each workExperience}}
+                <ul>
+                    <li>{{title}},{{company}}</li>
+                    <p> {{startDate}}-{{endDate}}</p>
+                    {{#each responsibilities}}
+                    <ul type='circle'>
+                        <li>{{this}}</li>
+                    </ul>
+                    {{/each}}
+                    <p>Year founded: {{year_founded}}, Industry: {{industry}}</p>
+
+                    <h2>Employees</h2>
+                    <div>
+                        {{#each employees}}
+                        <ul type="circle" class="mb-2">
+                            <li>{{name}},{{position}},{{department}}</li>
+                            <h3>Projects</h3>
+                            <div>
+                                {{#each projects}}
+                                <ul type="square">
+                                    <p>{{name}}, {{description}}, {{status}}</p>
+                                    <h4>Teams</h4>
+                                    <div>
+                                        {{#each teams}}
+                                        <ul type="square">
+                                            <li>{{team_name}}</li>
+                                            {{#with team_leader}}
+                                            <p>Team Leader: {{name}},{{title}},{{email}}</p>
+                                            {{/with}}
+                                            <h5>Team members</h5>
+                                            <div>
+                                                {{#each team_members}}
+                                                <ul type="circle">
+                                                    <li>{{name}},{{title}},{{email}}</li>
                                                     <br>
-                                                    Technologies
-                                                    {{#each technologies}}
+                                                    Skills
+                                                    {{#each skills}}
                                                     <ul type="square">
                                                         <li>{{this}}</li>
                                                     </ul>
-
                                                     {{/each}}
-                                                    Team Members
-                                                    {{#each team_members}}
+                                                    <div class="mb-5">Projects</div>
+                                                    {{#each projects}}
                                                     <ul type="square">
-                                                        <li>{{name}},{{title}}</li>
+                                                        <li>{{name}}, {{description}}</li>
+
+                                                        Technologies
+                                                        {{#each technologies}}
+                                                        <ul type="square">
+                                                            <li>{{this}}</li>
+                                                        </ul>
+
+                                                        {{/each}}
+                                                        Team Members
+                                                        {{#each team_members}}
+                                                        <ul type="square">
+                                                            <li>{{name}},{{title}}</li>
+                                                        </ul>
+                                                        {{/each}}
                                                     </ul>
                                                     {{/each}}
                                                 </ul>
                                                 {{/each}}
-                                            </ul>
-                                            {{/each}}
-                                        </div>
-                                    </ul>
-                                    {{/each}}
-                                </div>
-                            </ul>
-                            {{/each}}
-                        </div>
-                    </ul>
-                    {{/each}}
-                </div>
-            </ul>
+                                            </div>
+                                        </ul>
+                                        {{/each}}
+                                    </div>
+                                </ul>
+                                {{/each}}
+                            </div>
+                        </ul>
+                        {{/each}}
+                    </div>
+                </ul>
 
 
-            {{/each}}
+                {{/each}}
+            </div>
         </div>
+        {{/with}}
     </div>
-    {{/with}}
-</div>
+</main>

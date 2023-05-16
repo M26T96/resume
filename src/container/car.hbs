@@ -1,194 +1,196 @@
-<div>
-    <h1>{{make}} <span class="badge bg-secondary">{{model}}</span></h1>
-    {{year}},{{color}}
-    <hr>
+<main class="m-2">
     <div>
-        {{#with features}}
-        <div>
-            <h2 align="center">Interiror:</h2>
-            {{#with interior}}
-            <ul class="list-group">
-                <h3>Seates: </h3>
-                <li class="list-group-item list-group-item-warning">
-                    Material: {{seats.material}}<br />
-                    Color: {{seats.color}}<br />
-                    Heated {{seats.heated}}<br />
-                    Ventilated: {{seats.ventilated}}
-                </li>
-            </ul>
-            <hr>
-            <div>
-                <h3>Dashboard:</h3>
-                {{#with dashboard}}
-                <ul class="list-group">
-                    <li class="list-group-item list-group-item-light">
-                        Material: {{material}}<br />
-                        Color: {{color}}<br />
-                    </li>
-                    <li class="list-group-item list-group-item-light">
-                        <h4>Dispaly: </h4>
-                        Type: {{display.type}}, {{display.size}}, {{display.resolution}}<br />
-                        Touchscreen: {{display.touchscreen}}
-                    </li>
-
-                </ul>
-                {{/with}}
-            </div>
-
-            <hr>
-            <div>
-                <h3>Audio:</h3>
-                {{#with audio}}
-                <ul class="list-group">
-                    <li class="list-group-item list-group-item-info">
-                        System: {{system}}<br />
-                        Speakers: {{speakers}}<br />
-                        Subwoofer: {{subwoofer}}<br />
-                        Bluetooth: {{bluetooth}}<br />
-                        USB: {{USB}}
-                    </li>
-                </ul>
-                {{/with}}
-            </div>
-            {{/with}}
-        </div>
+        <h1>{{make}} <span class="badge bg-secondary">{{model}}</span></h1>
+        {{year}},{{color}}
         <hr>
-        <br>
         <div>
-            {{#with exterior}}
-            <h2 align="center">Exterior</h2>
-
-            <div>
-                <h3>Wheels:</h3>
-                {{#with wheels}}
-                <span class="badge text-bg-primary">
-                    Size: {{size}}<br />
-                    Type: {{type}}<br />
-                    Color: {{color}}<br />
-                </span>
-                {{/with}}
+            {{#with features}}
+            <div class="mb-5">
+                <h2 class="text-center">Interiror:</h2>
+                {{#with interior}}
+                <ul class="list-group">
+                    <h3>Seates: </h3>
+                    <li class="list-group-item list-group-item-warning">
+                        Material: {{seats.material}}<br />
+                        Color: {{seats.color}}<br />
+                        Heated {{seats.heated}}<br />
+                        Ventilated: {{seats.ventilated}}
+                    </li>
+                </ul>
                 <hr>
                 <div>
-                    <h3>Headlights:</h3>
-                    {{#with headlights}}
-                    <span class="badge text-bg-success">
-                        Type: {{type}}<br />
-                        Brightness: {{brightness}}<br />
-                        Automatic: {{automatic}}
-                    </span>
+                    <div class='display-6 pb-4'>Dashboard:</div>
+                    {{#with dashboard}}
+                    <ul class="list-group pb-2">
+                        <li class="list-group-item list-group-item-light">
+                            Material: {{material}}<br />
+                            Color: {{color}}<br />
+                        </li>
+                        <li class="list-group-item list-group-item-light ">
+                            <h4>Display: </h4>
+                            Type: {{display.type}}, {{display.size}}, {{display.resolution}}<br />
+                            Touchscreen: {{display.touchscreen}}
+                        </li>
+
+                    </ul>
                     {{/with}}
-                    <hr>
                 </div>
+
+                <hr>
                 <div>
-                    <h3>Sunroof:</h3>
-                    {{#with sunroof}}
-                    <span class="badge text-bg-warning">
-                        Type: {{type}}<br />
+                    <div class='display-6'>Audio:</div>
+                    {{#with audio}}
+                    <ul class="list-group pt-4">
+                        <li class="list-group-item list-group-item-info ">
+                            System: {{system}}<br />
+                            Speakers: {{speakers}}<br />
+                            Subwoofer: {{subwoofer}}<br />
+                            Bluetooth: {{bluetooth}}<br />
+                            USB: {{USB}}
+                        </li>
+                    </ul>
+                    {{/with}}
+                </div>
+                {{/with}}
+            </div>
+            <hr>
+
+            <div ckass="mb-5">
+                {{#with exterior}}
+                <div class='display-5 text-center'>Exterior</div>
+
+                <div>
+                    <div class="display-6">Wheels:</div>
+                    {{#with wheels}}
+                    <span class="badge text-bg-primary">
                         Size: {{size}}<br />
-                        Automatic: {{automatic}}
+                        Type: {{type}}<br />
+                        Color: {{color}}<br />
                     </span>
                     {{/with}}
                     <hr>
+                    <div>
+                        <div class="display-6">Headlights:</div>
+                        {{#with headlights}}
+                        <span class="badge text-bg-success">
+                            Type: {{type}}<br />
+                            Brightness: {{brightness}}<br />
+                            Automatic: {{automatic}}
+                        </span>
+                        {{/with}}
+                        <hr>
+                    </div>
+                    <div>
+                        <div class='display-5 text-center'>Sunroof:</div>
+                        {{#with sunroof}}
+                        <span class="badge text-bg-warning">
+                            Type: {{type}}<br />
+                            Size: {{size}}<br />
+                            Automatic: {{automatic}}
+                        </span>
+                        {{/with}}
+                        <hr>
+                    </div>
                 </div>
-            </div>
-            {{/with}}
-        </div>
-
-        <br>
-        <div>
-            {{#with safety}}
-            <h2 align="center">Safety</h2>
-            <div>
-                <h3>Airbags:</h3>
-                {{#with airbags}}
-                <span class="badge rounded-pill text-bg-secondary">
-                    Front: {{front}}<br />
-                    Side: {{side}}<br />
-                    Knee: {{knee}}<br />
-                    Rear: {{rear}}
-                </span>
-
                 {{/with}}
-                <hr>
+            </div>
+
+
+            <div class="mb-5">
+                {{#with safety}}
+                <div class='display-5 text-center'>Safety</div>
                 <div>
-                    <h3>Assistance:</h3>
-                    {{#with assistance}}
-                    <span class="badge rounded-pill text-bg-dark">
-                        Blind_spot_monitoring: {{ blind_spot_monitoring}}<br />
-                        Rear_cross_traffic_alert: {{rear_cross_traffic_alert}}<br />
-                        Lane_departure_warning: {{lane_departure_warning}}<br />
-                        Adaptive_cruise_control: {{adaptive_cruise_control}}<br />
-                        Collision_warning: {{collision_warning}}<br />
+                    <div class="display-6">Airbags:</div>
+                    {{#with airbags}}
+                    <span class="badge rounded-pill text-bg-secondary">
+                        Front: {{front}}<br />
+                        Side: {{side}}<br />
+                        Knee: {{knee}}<br />
+                        Rear: {{rear}}
                     </span>
+
                     {{/with}}
-                    {{/with}}
+                    <hr>
+                    <div>
+                        <div class='display-5 text-center'>Assistance:</div>
+                        {{#with assistance}}
+                        <span class="badge rounded-pill text-bg-dark">
+                            Blind_spot_monitoring: {{ blind_spot_monitoring}}<br />
+                            Rear_cross_traffic_alert: {{rear_cross_traffic_alert}}<br />
+                            Lane_departure_warning: {{lane_departure_warning}}<br />
+                            Adaptive_cruise_control: {{adaptive_cruise_control}}<br />
+                            Collision_warning: {{collision_warning}}<br />
+                        </span>
+                        {{/with}}
+                        {{/with}}
+                    </div>
                 </div>
-            </div>
-            {{/with}}
+                {{/with}}
 
-        </div>
-        <hr>
-        <br>
-        <div>
-            {{#with engine}}
-            <h2 align="center">Engine</h2>
-            <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action list-group-item-primary">
-                    Type: {{type}}<br />
-                    Displacement: {{displacement}}<br />
-                    Horwepower: {{horsepower}}<br />
-                    Torque: {{torque}}<br />
-                    Transmission: {{transmission.type}}, {{transmission.gears}} speeds
-                </a>
             </div>
-            {{/with}}
-        </div>
+            <hr>
 
-        <hr>
-        <br>
-        <div>
-            {{#with fuel_economy}}
-            <h2 align="center">Fuel economy</h2>
-            <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">
-                    City: {{city}}<br />
-                    Highway: {{highway}}<br />
-                    Combined: {{combined}}
-                </a>
+            <div class="mb-5">
+                {{#with engine}}
+                <div class='display-5 text-center'>Engine</div>
+                <div class="list-group pt-3">
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-primary">
+                        Type: {{type}}<br />
+                        Displacement: {{displacement}}<br />
+                        Horwepower: {{horsepower}}<br />
+                        Torque: {{torque}}<br />
+                        Transmission: {{transmission.type}}, {{transmission.gears}} speeds
+                    </a>
+                </div>
+                {{/with}}
             </div>
-            {{/with}}
-        </div>
 
-        <hr>
-        <br>
-        <div>
-            {{#with price}}
-            <h2 align="center">Price</h2>
-            <ul class="list-group">
-                <li class="list-group-item list-group-item-light">
-                    Base: {{base}}<br />
-                    Destination: {{destination}}<br />
-                </li>
-                <h4>Options:</h4>
-                {{#with options}}
+            <hr>
+
+            <div class="mb-5">
+                {{#with fuel_economy}}
+                <div class='display-5 text-center'>Fuel economy</div>
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">
+                        City: {{city}}<br />
+                        Highway: {{highway}}<br />
+                        Combined: {{combined}}
+                    </a>
+                </div>
+                {{/with}}
+            </div>
+
+            <hr>
+
+            <div>
+                {{#with price}}
+                <div class='display-5 text-center'>Price</div>
                 <ul class="list-group">
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
-                        <label class="form-check-label" for="firstCheckbox">Navigation: {{navigation}}</label>
+                    <li class="list-group-item list-group-item-light">
+                        Base: {{base}}<br />
+                        Destination: {{destination}}<br />
                     </li>
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
-                        <label class="form-check-label" for="secondCheckbox"> Moonroof: {{moonroof}}</label>
-                    </li>
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
-                        <label class="form-check-label" for="thirdCheckbox">Premium paint: {{premium_paint}}</label>
-                    </li>
+                    <div class='display-6'>Options:</div>
+                    {{#with options}}
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                            <label class="form-check-label" for="firstCheckbox">Navigation: {{navigation}}</label>
+                        </li>
+                        <li class="list-group-item">
+                            <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+                            <label class="form-check-label" for="secondCheckbox"> Moonroof: {{moonroof}}</label>
+                        </li>
+                        <li class="list-group-item">
+                            <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                            <label class="form-check-label" for="thirdCheckbox">Premium paint: {{premium_paint}}</label>
+                        </li>
+                    </ul>
+                    {{/with}}
+                    <button type="button" class="btn btn-primary">Купити {{total}}</button>
                 </ul>
                 {{/with}}
-                <button type="button" class="btn btn-primary">Купити {{total}}</button>
-            </ul>
-            {{/with}}
+            </div>
         </div>
     </div>
-</div>
+</main>
