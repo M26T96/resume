@@ -1,85 +1,90 @@
-<div>
-    <h1><span class="badge bg-secondary">{{name}}</span></h1>
+<main class="m-2">
     <div>
-        {{description}}<br />
-        {{history.year}}, {{history.founder}}
-    </div>
-    <hr>
-    <div>
-        <h2>Types:</h2>
-        {{#each types}}
-        <button type="button" class="btn btn-primary">{{this}}</button>
-        {{/each}}
-    </div>
-    <hr>
+        <h1><span class="badge bg-secondary mb-2">{{name}}</span></h1>
+        <div>
+            {{description}}<br />
+            {{history.year}}, {{history.founder}}
+        </div>
+        <hr>
+        <div>
+            <h2 class="pb-3">Types:</h2>
+            {{#each types}}
+            <button type="button" class="btn btn-primary mb-3">{{this}}</button>
+            {{/each}}
+        </div>
+        <hr>
 
-    <div>
-        <h2>Syntax:</h2>
-        {{#with syntax}}
-        {{#each variables}}
-        <ul class="list-group">
-            <li class="list-group-item disabled" aria-disabled="true">{{this}}</li>
-        </ul>
-        {{/each}}
-        <ul class="list-group">
-            <li class="list-group-item disabled" aria-disabled="true">{{functions}}</li>
-        </ul>
         <div>
-            <h3>Conditionals:</h3>
-            {{#each conditionals}}
-            <ul class="list-group list-group-horizontal">
-                <li class="list-group-item">{{this}}</li>
-            </ul>
-            {{/each}}
-        </div>
-        <div>
-            <h3>Loops:</h3>
-            {{#each loops}}
-            <button type="button" class="btn btn-warning">{{this}}</button>
-            {{/each}}
-        </div>
-        <h3>Classes:</h3>
-        {{classes}}
-        {{/with}}
-        <hr>
-        <br>
-        <div>
-            <h2>Features:</h2>
-            {{#each features}}
-            <ul class="list-group">
-                <li class="list-group-item list-group-item-success">{{this}}</li>
-            </ul>
-            {{/each}}
-        </div>
-        <hr>
-        <br>
-        <div>
-            <h2>Libraries:</h2>
-            {{#each libraries}}
-            <ul class="list-group">
-                <li class="list-group-item list-group-item-info">{{this}}</li>
-            </ul>
-            {{/each}}
-        </div>
-        <hr>
-        <br>
-        <div>
-            <h2>Tools:</h2>
-            {{#each tools}}
-            <ul class="list-group">
-                <li class="list-group-item list-group-item-danger">{{this}}</li>
-            </ul>
-            {{/each}}
-        </div>
-        <hr>
-        <br>
-        <div>
-            <h2>Community:</h2>
-            {{#each community}}
-            <button type="button" class="btn btn-link" title="{{type}}">{{name}}</button>
-            {{/each}}
-        </div>
-    </div>
-    <hr>
+            <div class="mb-2">
+                <h2 class="pb-3">Syntax:</h2>
+                {{#with syntax}}
+                {{#each variables}}
+                <div class="mb-3">
+                    <ul class="list-group">
+                        <li class="list-group-item disabled" aria-disabled="true">{{this}}</li>
+                    </ul>
+                    {{/each}}
+                    <ul class="list-group">
+                        <li class="list-group-item disabled" aria-disabled="true">{{functions}}</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="pb-3">Conditionals:</h3>
+                    {{#each conditionals}}
+                    <ul class="list-group list-group-horizontal">
+                        <li class="list-group-item">{{this}}</li>
+                    </ul>
+                    {{/each}}
+                </div>
+                <div>
+                    <h3 class="mb-3 mt-3">Loops:</h3>
+                    {{#each loops}}
+                    <button type="button" class="btn btn-warning mb-3">{{this}}</button>
+                    {{/each}}
+                </div>
+                <h3>Classes:</h3>
+                {{classes}}
+                {{/with}}
+                <hr>
+            </div>
+            <div class="mb-5">
+                <h2 class="mb-3">Features:</h2>
+                {{#each features}}
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-success">{{this}}</li>
+                </ul>
+                {{/each}}
+            </div>
+            <hr>
 
-</div>
+            <div class="mb-5">
+                <h2 class="mb-3">Libraries:</h2>
+                {{#each libraries}}
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-info">{{this}}</li>
+                </ul>
+                {{/each}}
+            </div>
+            <hr>
+
+            <div class="mb-5">
+                <h2 class="mb-3">Tools:</h2>
+                {{#each tools}}
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-danger">{{this}}</li>
+                </ul>
+                {{/each}}
+            </div>
+            <hr>
+
+            <div>
+                <h2 class="mb-3">Community:</h2>
+                {{#each community}}
+                <button type="button" class="btn btn-link" title="{{type}}">{{name}}</button>
+                {{/each}}
+            </div>
+        </div>
+        <hr>
+
+    </div>
+</main>

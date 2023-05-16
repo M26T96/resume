@@ -1,61 +1,63 @@
-<div>
-    {{#with web}}
+<main class="m-2">
     <div>
-        <h1>{{> title data='Languages'}}</h1>
+        {{#with web}}
         <div>
-            {{#each languages}}
-            <ul>
-                Name: {{name}}<br />
-                Version: {{version}}, {{description}}
-            </ul>
+            <h1>{{> title data='Languages'}}</h1>
             <div>
-                {{#each elements}}
+                {{#each languages}}
                 <ul>
                     Name: {{name}}<br />
-                    Description: {{description}}
-
+                    Version: {{version}}, {{description}}
                 </ul>
-                <div>
-                    {{#if attributes}}<h2>Attributes: </h2>{{/if}}
-                    {{#each attributes}}
-                    {{name}}
-                    {{description}}<br />
-                    {{/each}}
-                </div>
-                {{/each}}
-            </div>
-            <div>
-                <div>
-                    {{#if properties}} <h2>Properties:</h2>{{/if}}
-                    {{#each properties}}
-                    {{name}}, {{description}}
+                <div class="mt-3">
+                    {{#each elements}}
+                    <ul>
+                        Name: {{name}}<br />
+                        Description: {{description}}
+
+                    </ul>
                     <div>
-                        {{#if values}}<h3>Values: </h3>
-                        {{#each values}}
-                        {{value}}, {{description}}<br />
+                        {{#if attributes}}<h2>Attributes: </h2>{{/if}}
+                        {{#each attributes}}
+                        {{name}}
+                        {{description}}<br />
                         {{/each}}
-                        {{/if}}
                     </div>
                     {{/each}}
                 </div>
                 <div>
                     <div>
-                        {{#if functions}} <h2>Functions: </h2>{{/if}}
-                        {{#each functions}}
-                        {{name}}, <em>{{description}}</em><br />
-                        <div>
-
-                            {{#each parameters}}
-                            {{name}}
-                            {{type}}, {{description}}<br /><br />
+                        {{#if properties}} <h2>Properties:</h2>{{/if}}
+                        {{#each properties}}
+                        {{name}}, {{description}}
+                        <div class="mt-3">
+                            {{#if values}}<h3>Values: </h3>
+                            {{#each values}}
+                            {{value}}, {{description}}<br />
                             {{/each}}
+                            {{/if}}
                         </div>
                         {{/each}}
                     </div>
+                    <div>
+                        <div>
+                            {{#if functions}} <h2>Functions: </h2>{{/if}}
+                            {{#each functions}}
+                            {{name}}, <em>{{description}}</em><br />
+                            <div>
+
+                                {{#each parameters}}
+                                {{name}}
+                                {{type}}, {{description}}<br /><br />
+                                {{/each}}
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
                 </div>
+                {{/each}}
             </div>
-            {{/each}}
         </div>
+        {{/with}}
     </div>
-    {{/with}}
-</div>
+</main>

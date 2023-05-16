@@ -1,140 +1,142 @@
-<div>
-    <h1> <span class="badge bg-secondary">{{name}}</span></h1>
-    {{description}}, {{category}}<br />
-    <button type="button" class="btn btn-success">Купити {{price}}</button>
-    <hr>
+<main class="m-2">
     <div>
-        {{#with features}}
-        <div>
-            <h2 align="center">Processor:</h2>
-            {{#with processor}}
-            <ul class="list-group">
-                <li class="list-group-item list-group-item-info">
-                    Brand: {{brand}}<br />
-                    Model: {{model}}<br />
-                    Spaeed: {{speed}}<br />
-                    Cores: {{cores}}<br />
-                    Cache: {{cache}}
-                </li>
-            </ul>
-            {{/with}}
-        </div>
+        <h1> <span class="badge bg-secondary">{{name}}</span></h1>
+        {{description}}, {{category}}<br />
+        <button type="button" class="btn btn-success mt-3">Купити {{price}}</button>
         <hr>
-        <br>
         <div>
-            <h2 align="center">Memory:</h2>
-            {{#with memory}}
-            <ul class="list-group">
-                <li class="list-group-item list-group-item-primary">
-                    Type: {{type}}<br />
-                    Size: {{size}}<br />
-                    Speed: {{speed}}
-                </li>
-            </ul>
-            {{/with}}
-        </div>
-        <hr>
-        <br>
-        <div>
-            <h2 align="center">Storage:</h2>
-            {{#with storage}}
-            <ul class="list-group">
-                <li class="list-group-item list-group-item-warning">
-                    Type: {{type}}<br />
-                    Size: {{size}}<br />
+            {{#with features}}
+            <div class="mb-5">
+                <div class="display-6 text-center">Processor:</div>
+                {{#with processor}}
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-info">
+                        Brand: {{brand}}<br />
+                        Model: {{model}}<br />
+                        Spaeed: {{speed}}<br />
+                        Cores: {{cores}}<br />
+                        Cache: {{cache}}
+                    </li>
+                </ul>
+                {{/with}}
+            </div>
+            <hr>
 
-                </li>
-            </ul>
+            <div class="mb-5">
+                <div class="display-6 text-center mb-3">Memory:</div>
+                {{#with memory}}
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-primary">
+                        Type: {{type}}<br />
+                        Size: {{size}}<br />
+                        Speed: {{speed}}
+                    </li>
+                </ul>
+                {{/with}}
+            </div>
+            <hr>
+
+            <div class="mb-5">
+                <div class="display-6 text-center mb-3">Storage:</div>
+                {{#with storage}}
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-warning">
+                        Type: {{type}}<br />
+                        Size: {{size}}<br />
+
+                    </li>
+                </ul>
+                {{/with}}
+            </div>
+            <hr>
+
+            <div class="mb-5">
+                <div class="display-6 text-center mb-3">Display:</div>
+                {{#with display}}
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-success">
+                        Size: {{size}}<br />
+                        Resolution: {{resolution}}<br />
+                        Technology: {{technology}}<br />
+                        Color space: {{color_space}}<br />
+                        Brightness: {{brightness}}<br />
+                        Refresh rate: {{refresh_rate}}
+                    </li>
+                </ul>
+                {{/with}}
+            </div>
+            <hr>
+
+            <div class="mb-5">
+                <div class="display-6 text-center mb-3">Graphics:</div>
+                {{#with graphics}}
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-dark">
+                        Brand: {{brand}}<br />
+                        Model: {{model}}<br />
+                        Memory: {{memory}}
+                    </li>
+                </ul>
+                {{/with}}
+            </div>
+            <hr>
+
+            <div class="mb-5">
+                <div class="display-6 text-center">Ports:</div>
+                {{#each ports}}
+                Type: <b>{{type}}</b><br />
+                {{#if features}}Features: {{features}}<br />{{/if}}
+                Count: {{count}}<br />
+                {{/each}}
+            </div>
+            <hr>
+
+            <div class="mb-5">
+                <div class="display-6 text-center">Battery:</div>
+                {{#with battery}}
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-secondary">
+                        Type: {{type}}<br />
+                        Capacity: {{capacity}}<br />
+                        Life: {{life}}
+                    </li>
+                </ul>
+                {{/with}}
+            </div>
+            <hr>
+
+            <div class="mb-5">Weight: {{weight}}</div>
+            <hr>
+
+            <div class="mb-5">
+                <div class="display-6 text-center">Dimensions:</div>
+                {{#with dimensions}}
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-primary">
+                        Height: {{height}}<br />
+                        Width: {{width}}<br />
+                        Depth: {{depth}}
+                    </li>
+                </ul>
+                {{/with}}
+            </div>
+            <hr>
+
+            <div class="mb-5"><strong>Operating system: {{operating_system}}</strong></div>
+            <hr>
+
+            <div>
+                <div class="display-6 text-center">Accessories:</div>
+                {{#each accessories}}
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                        <label class="form-check-label" for="firstCheckbox">{{name}} {{price}}</label>
+                    </li>
+                </ul>
+                {{/each}}
+            </div>
             {{/with}}
         </div>
-        <hr>
-        <br>
-        <div>
-            <h2 align="center">Display:</h2>
-            {{#with display}}
-            <ul class="list-group">
-                <li class="list-group-item list-group-item-success">
-                    Size: {{size}}<br />
-                    Resolution: {{resolution}}<br />
-                    Technology: {{technology}}<br />
-                    Color space: {{color_space}}<br />
-                    Brightness: {{brightness}}<br />
-                    Refresh rate: {{refresh_rate}}
-                </li>
-            </ul>
-            {{/with}}
-        </div>
-        <hr>
-        <br>
-        <div>
-            <h2 align="center">Graphics:</h2>
-            {{#with graphics}}
-            <ul class="list-group">
-                <li class="list-group-item list-group-item-dark">
-                    Brand: {{brand}}<br />
-                    Model: {{model}}<br />
-                    Memory: {{memory}}
-                </li>
-            </ul>
-            {{/with}}
-        </div>
-        <hr>
-        <br>
-        <div>
-            <h2 align="center">Ports:</h2>
-            {{#each ports}}
-            Type: <b>{{type}}</b><br />
-            {{#if features}}Features: {{features}}<br />{{/if}}
-            Count: {{count}}<br />
-            {{/each}}
-        </div>
-        <hr>
-        <br>
-        <div>
-            <h2 align="center">Battery:</h2>
-            {{#with battery}}
-            <ul class="list-group">
-                <li class="list-group-item list-group-item-secondary">
-                    Type: {{type}}<br />
-                    Capacity: {{capacity}}<br />
-                    Life: {{life}}
-                </li>
-            </ul>
-            {{/with}}
-        </div>
-        <hr>
-        <br>
-        <div>Weight: {{weight}}</div>
-        <hr>
-        <br>
-        <div>
-            <h2 align="center">Dimensions:</h2>
-            {{#with dimensions}}
-            <ul class="list-group">
-                <li class="list-group-item list-group-item-primary">
-                    Height: {{height}}<br />
-                    Width: {{width}}<br />
-                    Depth: {{depth}}
-                </li>
-            </ul>
-            {{/with}}
-        </div>
-        <hr>
-        <br>
-        <div><strong>Operating system: {{operating_system}}</strong></div>
-        <hr>
-        <br>
-        <div>
-            <h2 align="center">Accessories:</h2>
-            {{#each accessories}}
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
-                    <label class="form-check-label" for="firstCheckbox">{{name}} {{price}}</label>
-                </li>
-            </ul>
-            {{/each}}
-        </div>
-        {{/with}}
     </div>
-</div>
+</main>
